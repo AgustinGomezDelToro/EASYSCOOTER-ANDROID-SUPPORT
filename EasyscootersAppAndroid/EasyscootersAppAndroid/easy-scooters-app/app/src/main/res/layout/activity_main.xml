@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:text="Merci de renseigner les champs ci-dessous !"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
+        <EditText
+            android:id="@+id/contactClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:hint="Votre numéro"
+            android:inputType="number"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/nbscooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:hint="Numéro de la trottinette"
+            android:inputType="number"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:hint="Décrivez votre problème"
+            android:inputType="textMultiLine"
+            android:gravity="left|top"
+            android:layout_margin="10dp"/>
+
+
+
+
+        <Button
+            android:id="@+id/btn_step1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Suivant"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

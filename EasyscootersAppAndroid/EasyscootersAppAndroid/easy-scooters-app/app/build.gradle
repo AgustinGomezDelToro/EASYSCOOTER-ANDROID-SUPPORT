@@ -1,0 +1,61 @@
+//plugins {
+//    id 'com.android.application'
+//}
+apply plugin: 'com.android.application'
+
+android {
+    compileSdk 32
+    defaultConfig {
+        applicationId "com.example.easyscootersapp"
+        minSdk 21
+        targetSdk 32
+        versionCode 3
+        versionName "1.0.3"
+
+        // jackOptions.enabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+
+
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //implementation files('C:\\Users\\redaa\\Documents\\Cours\\Pa\\library\\mariadb-java-client-3.0.6.jar')
+    //implementation files('libs\\mysql-connector-java-5.1.23-bin.jar')
+
+    implementation "org.mariadb.jdbc:mariadb-java-client:3.0.6"
+    implementation 'mysql:mysql-connector-java:5.1.49'
+
+    implementation files('libs\\mail.jar')
+    implementation files('libs\\additionnal.jar')
+    implementation files('libs\\activation.jar')
+
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    // (see https://github.com/ReactiveX/RxJava/releases for latest 3.x.x version)
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //implementation 'com.squareup.picasso:picasso:3.0.0-alpha01'
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+}

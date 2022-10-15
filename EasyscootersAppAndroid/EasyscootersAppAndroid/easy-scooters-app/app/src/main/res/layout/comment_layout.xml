@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            app:strokeColor="@color/purple_500"
+            app:strokeWidth="1dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Nombre de usuario"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scooter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="Aqui scooter"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintLeft_toLeftOf="@id/user"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/commentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="description descripocion descripcion descripcion...."
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scooter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888888" />
+</androidx.appcompat.widget.LinearLayoutCompat>
